@@ -4,291 +4,335 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Protfolio Website</title>
-    <link href="style1.css", rel="stylesheet"> 
+    <link href="style.css", rel="stylesheet"> 
     <script src="https://kit.fontawesome.com/877e698dd2.js" crossorigin="anonymous"></script>    
 </head>
 <style>
     *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-body{
-    background-color: #080808;
-}
-
-
-h1{
-    font-size: 60px;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
-    color:rgb(222, 48, 48);
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
     }
-
-.container{
-    padding: 10px 10%;
-}
-nav{
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-nav ul li{
-    display: inline-block;
-    margin:10px 20px;
-}
-nav ul li a{
-    text-decoration: none;
-    color: #fff;
-    font-size: 18px;
-    position: relative;
-}
-nav ul li a::after{
-    content: "";
-    width:0px;
-    height:3px;
-    background-color:rgb(222, 48, 48);
-    position: absolute;
-    left:0px;
-    bottom:-6px;
-    transition: width 0.3s;
-}
-nav ul li a:hover::after {
-     width: 100%; /* Ensure the underline expands on hover */
-}
-.rows{
-    display:flex;
-}
-.column1{
-    color: #8a7a7a;
-    margin-top:14%;
-    font-size:33px;
-}
-.column2 img{
-    width:380px; 
-    height:450px; 
-    border-radius: 15px; 
-    margin-left: 55px; 
-    margin-top:30px;
-}
-.cont{
-    color: #8a7a7a;
-    padding: 50px 10%;
-}
-.row{
-    display:flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-.col1{
-    flex-basis: 30%;
-}
-.col2{
-    flex-basis: 60%;
-}
-.title{
-    color:#8a7a7a;
-    display: flex;
-    margin: 20px 0 40px;
-}
-.link{
-    margin-right: 50px;
-    font-size: 20px;
-    font-weight: 400;
-    cursor: pointer;
-    position: relative;
-}
-.link::after{
-    content: "";
-    width:0;
-    height:3px;
-    background-color:rgb(222, 48, 48);
-    position: absolute;
-    left:0px;
-    bottom:-6px;
-    transition:0.3s;
-}
-.link.active-link::after{
-    width:50%;
-}
-
-.contents ul li{
-    list-style: none;
-    font-size: 16px;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin: 10px 0;
-}
-.contents ul li span{
-    color:rgb(222, 48, 48);
-}
-.contents{
-    display: none;
-}
-.contents.active{
-    display:block;
-}
-
-/* ....Projects.... */
-.my-projects{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap:150px;
-    margin-top: 40px;
-}
-p{
-    font-size:18px;
-}
-.my-projects div{
-    background-color:rgb(33, 37, 37);
-    padding:30px;
-    border-radius:10px;
-    font-size: 13px;
-    font-weight: 200;
-    transition: background 0.5s, transform 0.5s;
-} 
-.my-projects div i{
-    font-size: 30px;
-    margin-bottom: 10px;
-}
-.my-projects div a{
-    margin-top: 20px;
-    font-size: 16px;
-    color:#fff;
-    display: inline-block;
-}
-.my-projects div:hover{
-    background-color:rgb(132, 56, 56)   ;
-    transform: translateY(-10px);
-
-}
-
-/* My Projects */
-
-.proj-list{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap:150px;
-    margin-top: 40px;
-} 
-
-.proj1{
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    width: 350px;
-    margin: 20px;
-}
-.proj1 img{
-    height:350px;
-    width:350px; 
-    border-radius:10px;
-    display:block;
-    transition: transform 0.5s;
-  }
-.para{
-    width:100%;
-    height:0;
-    background:linear-gradient(rgba(0,0,0,0.4), #843838);
-    border-radius: 10px;
-    position: absolute;
-    left:0;
-    bottom: 0;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    color:beige;
-    transform: height 0.5s;
-} 
-.para h3{
-    margin-bottom: 20px;
-}
-.para p{
-    font-size: 16px;
-}
-.para a{
-    color:beige;
-    margin-top: 20px;
-    font-size: 18px;
-    line-height: 40px;
-    background-color:rgb(56, 51, 51);
-    width:40px;
-    height:40px;
-    border-radius: 50%;
-}
-.proj1:hover img{
-    transform: scale(1.1);
-}
-.proj1:hover .para{
-    height:100%;
-}
-.button{
-    display: block;
-    margin:50px auto;
-    width:fit-content;
-    padding: 14px 50px;
-    border: 2px solid #843838;
-    color: beige;
-    transition: background 0.5s;
-    border-radius: 5px;
-}
-.button:hover{
-    background: #843838;
-}
-
-
-/* ..........Contact........ */
-.cont-left{
-    flex-basis: 40%;
-}
-.cont-right{
-    flex-basis: 60%;
-}
-.cont-left p{
-    margin-top: 30px;
-    font-size:18px ;
-}
-i{
-    margin-right:30px;
-    font-size: 25px;
-}
-.cont-right{
-    width:100%;
-}
-form input, form textarea{
-    width:100%;
-    border: 0px;
-    border-radius: 5px;
-    padding: 15px;
-    margin:15px;
-    background-color:rgb(56, 51, 51) ;
-    color: #fff;
-    font-size: 18px;
-}
-
-.copyright{
-    width:100%;
-    text-align: center;
-    color:#fff;
-    font-family:Arial, Helvetica, sans-serif;
-    padding:20px;
-    background: rgb(56, 51, 51);
-}
-
-/* ---------css for small screen--- */
-/* @media only screen and (max-width: 600px){
-    .column img{
+    body{
+        background-color: #080808;
+    }
+    html{
+        scroll-behavior: smooth;
+    }
+    
+    h1{
+        font-size: 60px;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
+        color:rgb(222, 48, 48);
+        }
+    
+    .container{
+        padding: 10px 10%;
+    }
+    nav{
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    nav ul li{
+        display: inline-block;
+        margin:10px 20px;
+    }
+    nav ul li a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 18px;
+        position: relative;
+    }
+    nav ul li a::after{
+        content: "";
+        width:0px;
+        height:3px;
+        background-color:rgb(222, 48, 48);
+        position: absolute;
+        left:0px;
+        bottom:-6px;
+        transition: width 0.3s;
+    }
+    nav ul li a:hover::after {
+         width: 100%; /* Ensure the underline expands on hover */
+    }
+    .rows{
+        display:flex;
+    }
+    .column1{
+        color: #8a7a7a;
+        margin-top:14%;
+        font-size:33px;
+    }
+    .column2 img{
+        width:380px; 
+        height:450px; 
+        border-radius: 15px; 
+        margin-left: 55px; 
+        margin-top:30px;
+    }
+    .cont{
+        color: #8a7a7a;
+        padding: 50px 10%;
+    }
+    .row{
+        display:flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .col1{
+        flex-basis: 30%;
+    }
+    .col2{
+        flex-basis: 60%;
+    }
+    .title{
+        color:#8a7a7a;
+        display: flex;
+        margin: 20px 0 40px;
+    }
+    .link{
+        margin-right: 50px;
+        font-size: 20px;
+        font-weight: 400;
+        cursor: pointer;
+        position: relative;
+    }
+    .link::after{
+        content: "";
+        width:0;
+        height:3px;
+        background-color:rgb(222, 48, 48);
+        position: absolute;
+        left:0px;
+        bottom:-6px;
+        transition:0.3s;
+    }
+    .link.active-link::after{
+        width:50%;
+    }
+    
+    .contents ul li{
+        list-style: none;
+        font-size: 16px;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        margin: 10px 0;
+    }
+    .contents ul li span{
+        color:rgb(222, 48, 48);
+    }
+    .contents{
+        display: none;
+    }
+    .contents.active{
+        display:block;
+    }
+    
+    /* ....Projects.... */
+    .my-achievements{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-gap:150px;
+        margin-top: 40px;
+    }
+    p{
+        font-size:18px;
+    }
+    .my-achievements div{
+        background-color:rgb(33, 37, 37);
+        padding:30px;
+        border-radius:10px;
+        font-size: 13px;
+        font-weight: 200;
+        transition: background 0.5s, transform 0.5s;
+    } 
+    .my-achievements div i{
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    .my-achievements div a{
+        margin-top: 20px;
+        font-size: 16px;
+        color:#fff;
+        display: inline-block;
+    }
+    .my-achievements div:hover{
+        background-color:rgb(132, 56, 56)   ;
+        transform: translateY(-10px);
+    }
+    
+    @media screen and (max-width: 1024px) {
+        .proj-list {
+            grid-template-columns: repeat(2, 1fr); /* 2 columns layout */
+        }
+    }
+    
+    @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 40px;
+            }
         
+            .column1 {
+                font-size: 28px;
+            }
+        
+            .column2 img {
+                width: 250px;
+                height: 300px;
+            }
+        
+            .row, .rows {
+                flex-direction: column;
+            }
+        
+            .column1, .column2 {
+                margin: 10px 0;
+                text-align: center;
+            }
+        }
+        
+    @media screen and (max-width: 480px) {
+            nav ul li {
+                margin: 5px 10px;
+            }
+        
+            h1 {
+                font-size: 32px;
+            }
+        
+            .column1 {
+                font-size: 24px;
+            }
+        
+            .column2 img {
+                width: 200px;
+                height: 250px;
+            }
+        
+            .proj-list, .my-achievements {
+                grid-template-columns: 1fr;
+                grid-gap: 20px;
+            }
+        }
+    
+    
+    
+    /* My Projects */
+    
+    .proj-list{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-gap:100px;
+        margin-top: 40px;
+    } 
+    
+    .proj1{
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        width: 350px;
+        margin: 20px;
     }
-    .coulmn1{
-        margin-top: 100%;
-        font-size:16px;
+    .proj1 img{
+        height:350px;
+        width:320px; 
+        border-radius:10px;
+        display:block;
+        transition: transform 0.5s;
+      }
+    .para{
+        width:100%;
+        height:0;
+        background:linear-gradient(rgba(0,0,0,0.4), #843838);
+        border-radius: 10px;
+        position: absolute;
+        left:0;
+        bottom: 0;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        color:beige;
+        transform: height 0.5s;
+    } 
+    .para h3{
+        margin-bottom: 20px;
     }
-
-} */
-
+    .para p{
+        font-size: 16px;
+    }
+    .para a{
+        color:beige;
+        margin-top: 20px;
+        font-size: 18px;
+        line-height: 40px;
+        background-color:rgb(56, 51, 51);
+        width:40px;
+        height:40px;
+        border-radius: 50%;
+    }
+    .proj1:hover img{
+        transform: scale(1.1);
+    }
+    .proj1:hover .para{
+        height:100%;
+    }
+    .button{
+        display: block;
+        margin:50px auto;
+        width:fit-content;
+        padding: 14px 50px;
+        border: 2px solid #843838;
+        color: beige;
+        transition: background 0.5s;
+        border-radius: 5px;
+    }
+    .button:hover{
+        background: #843838;
+    }
+    
+    
+    /* ..........Contact........ */
+    .cont-left{
+        flex-basis: 40%;
+    }
+    .cont-right{
+        flex-basis: 60%;
+    }
+    .cont-left p{
+        margin-top: 30px;
+        font-size:18px ;
+    }
+    i{
+        margin-right:30px;
+        font-size: 25px;
+    }
+    .cont-right{
+        width:100%;
+    }
+    form input, form textarea{
+        width:100%;
+        border: 0px;
+        border-radius: 5px;
+        padding: 15px;
+        margin:15px;
+        background-color:rgb(56, 51, 51) ;
+        color: #fff;
+        font-size: 18px;
+    }
+    
+    .copyright{
+        width:100%;
+        text-align: center;
+        color:#fff;
+        font-family:Arial, Helvetica, sans-serif;
+        padding:20px;
+        background: rgb(56, 51, 51);
+    }
 </style>
 <body>
     <div id="Header">
@@ -296,11 +340,11 @@ form input, form textarea{
     <nav>
         <h1><span style="color: beige;">V</span>aishnavi.</h1>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Portfolia</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#Header">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Projects">Projects</a></li>
+            <li><a href="#Achievements">Achievements</a></li>
+            <li><a href="#Contact">Contact</a></li>
         </ul>
     </nav>
     <div class="rows">
@@ -322,7 +366,7 @@ form input, form textarea{
             </div>
             <div class="col2">
                 <h2 style="color:#fff;font-size: 50px;">About Me</h2>
-                <p style="font-size: 18px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet et, vel quod nam officiis harum porro ipsam sunt, tenetur, dolorum at aut maiores? Animi perspiciatis harum nostrum facere odit dolorum.</p>
+                <p style="font-size: 18px;">Hi I'm Chanugonipalli Vaishnavi, an Electronics & Communication Engineering student at NIT Surat, specializing in programming languages like C/C++ and web development technologies. Currently doing Web development Projects to get handson experience. </p>
                 <div class="title">
                     <p class="link active-link" onclick="opentab('Skills')">Skills</p>
                     <p class="link" onclick="opentab('Experience')">Experience</p>
@@ -334,21 +378,21 @@ form input, form textarea{
                         <li><span>Data Structure and algorithms, C/C++</span><br>Intermediate</li>
                         <li><span>Computer Fundaments</span><br>MySQL, OOPS </li>
                         <li><span>Web technologies</span><br>HTML, CSS, JavaScript, React.js</li>
-                        <li><span>Others</span>Canva</li>
+                        <li><span>Others</span><br>Canva</li>
                     </ul>
                 </div>
                 <div class="contents" id="Experience">
                     <ul>
                         <li><span>ISF-IETE,SVNIT</span><br>Secretary</li>
                         <li><span>NSS,SVNIT</span><br>Senior Executive</li>
-                        <li><span>SPARSK-2022,SVNIT</span><br>Coordinator</li>
+                        <li><span>SPARSH-2022,SVNIT</span><br>Coordinator</li>
                     </ul>
                 </div>
                 <div class="contents" id="Education">
                     <ul>
                         <li><span>2022-2026</span><br>B.tech in Electronics & Communication Engineering at S.V.N.I.T</li>
                         <li><span>2019-2021</span><br>Intermediate from Trividyaa Junior College, Hyderabad</li>
-                        <li><span>upto 2019</span><br>Schooling from keshava Reddy E-learning School, Hyderabad</li>
+                        <li><span>Upto 2019</span><br>Schooling from keshava Reddy E-learning School, Hyderabad</li>
                     </ul>
                 </div>  
             </div>
@@ -356,28 +400,21 @@ form input, form textarea{
     </div>
 </div>
 
-<div id="Projects">
-    <div class="cont">
-        <h2 style="color:#fff;font-size: 50px;">My Achievements</h2>
-        <div class="my-projects">
-            <div>
-            <h2 style="color:beige ; font-size: 25px; margin-bottom: 13px;"></h2>
-            <p>Our Team Crux are Winners of the Rhythmix Competition, an integral part of three day long Mega Nights event Organized by CHRD club of SVNIT</p>
-            <a href="#">See more</a>
-        </div>
-        <div>
-            <h2 style="color:beige; font-size: 25px; margin-bottom: 13px;">Amazon Clone</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, ea. Tenetur, sit! Ipsam maiores omnis aliquam esse modi mollitia blanditiis. Error omnis necessitatibus aliquid ab voluptates atque. Adipisci, iste veniam.</p>
-            <a href="#">See more</a> 
-        </div>
-        </div>
-        </div>
-    </div>
 </div>
 <div id="Projects">
     <div class="cont">
         <h2 style="color:#fff;font-size: 50px;">My Projects</h2>
         <div class="proj-list">
+            <div class="proj1">
+                <img src="yt4.jpeg">
+                <div class="para">
+                    <h3>Youtube Clone</h3>
+                    <p>Developed the front end of a YouTube clone using React.js to design modular components, enabling efficient
+                        development, easier maintenance, and reusability.
+                        </p>
+                    <a href="https://github.com/Omramanuj/OmniDRIVE-with-WEB.git"><i class="fa-brands fa-youtube" style="padding: 7px 5px 5px 5px"; ></i></a>
+                </div>
+            </div>
             <div class="proj1">
                 <img src="omnibot.jpg">
                 <div class="para">
@@ -387,7 +424,7 @@ form input, form textarea{
                 </div>
             </div>
             <div class="proj1">
-                <img src="alogo.jpeg">
+                <img src="amz1.jpeg">
                 <div class="para">
                     <h3>Amazon Clone</h3>
                     <p>The Projects is made using html & css to get handson experience on how actually web-site builds. </p>
@@ -401,23 +438,45 @@ form input, form textarea{
     </div>
 </div>
 
+<div id="Achievements">
+    <div class="cont">
+        <h2 style="color:#fff;font-size: 50px;">Achievements</h2>
+        <div class="my-achievements">
+            <div>
+            <h2 style="color:beige ; font-size: 25px; margin-bottom: 13px;">Rhythmix Winners</h2>
+            <p>Our Team Crux are Winners of the Rhythmix Competition, an integral part of three day long Mega Nights event Organized by CHRD club of SVNIT</p>
+           
+        </div>
+        <div>
+            <h2 style="color:beige; font-size: 25px; margin-bottom: 13px;">State-Level Athlete</h2>
+            <p>Selected to participate in the state-level running competition in November 2015.</p>
+          
+        </div>
+        </div>
+        </div>
+</div>
+
 <div id="Contact">
     <div class="cont">
        <div class="row">
         <div class="cont-left">
             <h2 style="color:#fff;font-size: 50px;">Contact Me</h2>
-            <p><i class="fa-solid fa-square-envelope" ></i>chanugonipallivaishnavi@gmail.com</p>
-            <p><i class="fa-solid fa-phone"></i>+91 8309794670</p>
+            <p>
+                    <i class="fa-solid fa-square-envelope"></i>chanugonipallivaishnavi@gmail.com.
+            </p>
+            <p>
+                <i class="fa-solid fa-phone"></i>+91 8309794670</p>
             <p><i class="fa-brands fa-instagram"></i>vaishnavi_reddy28</p>
             <p><i class="fa-brands fa-linkedin"></i>https://www.linkedin.com/in/C-Vaishnavi</p>
-            <a href="Blank doc.pdf" class="button" style="margin-left: 5px;">Download CV</a>
+            <a href="c:\Users\91830\Downloads\Vaishnavi_Resume (4).pdf" class="button" style="margin-left: 5px;">Download CV</a>
         </div>
         <div class="cont-right">
-            <form>
-                <input type='text' name="Name" placeholder="Your Name" required>
+            <form name="submit-to-google-sheet">
+                <input  type='text' name="Name" placeholder="Your Name" required>
                 <input type='email' name="email" placeholder="Your Email" required>
                 <textarea name="Message" rows="8" placeholder="Message Here" required></textarea>
                 <button type="submit" class="button" style="margin-left: 16px;margin-top: 10px; background-color:black; cursor:pointer";>Submit</button>
+
             </form>
         </div>
        </div>
@@ -440,9 +499,19 @@ form input, form textarea{
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active");
     }
-    
-
 </script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxF2ARPR8PwY4YzotGTnF_95i5AFkr0kziGXGMX6dskteJ976UHwHtlGctxODUEDRRzHw/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
     
 </body>
 </html>
